@@ -2,6 +2,13 @@
   "parserOptions": {
     "requireConfigFile": false,
   },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:import/typescript",
+    "plugin:import/recommended"
+  ],
   "rules": {
     // react
     "react/jsx-props-no-spreading": 1,
@@ -85,5 +92,5 @@
   "globals": {
     "isProduction": "readonly"
   },
-  "plugins": ["unicorn"]
+  "plugins": ["unicorn", "react", "react-hooks", "import", "jsx-a11y"]
 }

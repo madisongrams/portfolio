@@ -23,6 +23,8 @@ import {
 } from "@chakra-ui/icons";
 import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
+import { ColorModeSwitcher } from "../ColorModeSwitcher";
+
 import { Outlet, Link as RouteLink } from "react-router-dom";
 
 export default function NavBar() {
@@ -71,7 +73,7 @@ export default function NavBar() {
               <Text
                 textAlign={useBreakpointValue({ base: "center", md: "left" })}
               >
-                Madison Grams
+                MG
               </Text>
             </Link>
           </RouteLink>
@@ -80,6 +82,7 @@ export default function NavBar() {
             <DesktopNav />
           </Flex>
         </Flex>
+        <ColorModeSwitcher justifySelf="flex-end" />
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>

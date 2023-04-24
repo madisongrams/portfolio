@@ -41,7 +41,11 @@ export const NAV_ITEMS: Array<NavItem> = [
       href: 'about',
     },
     {
-      label: 'Hire Designers',
-      href: '#',
+      label: 'Resume',
+      href: 'resume',
+    },
+    {
+      label: 'Contact',
+      href: 'contact',
     },
   ];
