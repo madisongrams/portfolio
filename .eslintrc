@@ -1,0 +1,89 @@
+{
+  "parserOptions": {
+    "requireConfigFile": false,
+  },
+  "rules": {
+    // react
+    "react/jsx-props-no-spreading": 1,
+    "react/require-default-props": 1,
+    "react/forbid-prop-types": "off",
+    "react/destructuring-assignment": 1,
+    "react/no-array-index-key": 1,
+    "react/no-access-state-in-setstate": 1,
+    "react/no-deprecated": 1,
+    // unicorn
+    "unicorn/explicit-length-check": 1,
+    "unicorn/no-null": 0,
+    "unicorn/no-fn-reference-in-iterator": 1,
+    "unicorn/prevent-abbreviations": 0,
+    "unicorn/no-object-as-default-parameter": 1,
+    "unicorn/prefer-number-properties": 1,
+    "unicorn/no-reduce": 1,
+    "unicorn/number-literal-case": 0,
+    "unicorn/no-for-loop": 0,
+    "unicorn/prefer-set-has": 0,
+    "unicorn/no-array-for-each": 0,
+    "unicorn/consistent-destructuring": 0,
+    "unicorn/switch-case-braces": 0,
+    "unicorn/prefer-switch": 0,
+    "unicorn/numeric-separators-style": 0,
+    "unicorn/no-array-push-push": 0,
+    "unicorn/no-negated-condition": 0,
+    "unicorn/prefer-spread": 0,
+    "unicorn/no-static-only-class": 0,
+    "unicorn/prefer-array-index-of": 0,
+    "unicorn/no-array-reduce": 0,
+    // import
+    "import/no-unresolved": 1,
+    "import/prefer-default-export": 1,
+    "import/no-cycle": 1,
+    "import/extensions": 1,
+    "import/named": 2,
+    "import/no-extraneous-dependencies": [
+      2,
+      {
+        "devDependencies": [
+          "**/*.test.js",
+          "**/*.test.jsx",
+          "**/*.test.ts",
+          "**/*.test.tsx",
+          "**/test-utils.jsx"
+        ]
+      }
+    ],
+    // jsx-a11y
+    "jsx-a11y/control-has-associated-label": 1,
+    "jsx-a11y/click-events-have-key-events": 1,
+    "jsx-a11y/mouse-events-have-key-events": 1,
+    "jsx-a11y/no-noninteractive-element-interactions": 1,
+    "jsx-a11y/no-static-element-interactions": 1,
+    "jsx-a11y/label-has-associated-control": 1,
+    // misc
+    "no-prototype-builtins": 1,
+    "class-methods-use-this": 2,
+    "guard-for-in": 1,
+    "no-restricted-syntax": 1,
+    "no-restricted-globals": 1,
+    "no-shadow": 1,
+    "camelcase": 1,
+    "no-underscore-dangle": 0,
+    "no-return-assign": 1,
+    "no-multi-assign": 1,
+    "prefer-const": 1,
+    "no-console": [1, { "allow": ["info", "warn", "error"] }],
+    "curly": 1,
+    "no-plusplus": [2, { "allowForLoopAfterthoughts": true }],
+    "consistent-return": 0,
+    "max-classes-per-file": 0,
+    "no-bitwise": [1, { "allow": ["~"] }],
+    "prefer-destructuring": [1, { "array": false }],
+    "no-continue": 0,
+    "func-names": [1, "as-needed"]
+  },
+  // keep these patterns in alphabetical order
+  "ignorePatterns": [],
+  "globals": {
+    "isProduction": "readonly"
+  },
+  "plugins": ["unicorn"]
+}
