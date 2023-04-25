@@ -1,9 +1,9 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Heading } from "@chakra-ui/react";
 
 export default function Resume() {
   return (
     <Box>
-      <Text> Resume</Text>
+      <Heading> Resume</Heading>
     </Box>
   );
 }

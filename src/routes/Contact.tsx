@@ -1,9 +1,9 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Heading } from "@chakra-ui/react";
 
 export default function Contact() {
   return (
     <Box>
-      <Text> contact me</Text>
+      <Heading>Contact Me!</Heading>
     </Box>
   );
 }

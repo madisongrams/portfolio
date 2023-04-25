@@ -6,7 +6,7 @@ const appTheme = extendTheme({
     initialColorMode: "system",
   },
   fonts: {
-    body: "Major Mono Display",
+    body: "monospace",
     heading: "Major Mono Display",
   },
   styles: {

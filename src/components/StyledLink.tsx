@@ -1,12 +1,11 @@
 import { ReactNode } from "react";
 import { Link as RouteLink } from "react-router-dom";
 
-import { Link } from "@chakra-ui/react";
+import { Heading, Link } from "@chakra-ui/react";
 
 type StyledLinkProps = {
   label?: string;
   href: string;
-  children?: ReactNode;
   color?: string;
   hoverColor?: string;
 };
@@ -14,7 +13,6 @@ type StyledLinkProps = {
 export default function StyledLink({
   label,
   href,
-  children,
   color,
   hoverColor,
 }: StyledLinkProps) {
@@ -30,7 +28,7 @@ export default function StyledLink({
           color: hoverColor,
         }}
       >
-        {children || label}
+        <Heading size="s">{label}</Heading>
       </Link>
     </RouteLink>
   );
@@ -38,7 +36,6 @@ export default function StyledLink({
 
 StyledLink.defaultProps = {
   label: "",
-  children: null,
   color: "black",
   hoverColor: "grey.500",
 };

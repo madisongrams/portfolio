@@ -19,9 +19,10 @@ export default function NavBar() {
   const { isOpen, onToggle } = useDisclosure();
   const color = useColorModeValue("purple.600", "purple.100");
   const hoverColor = useColorModeValue("purple.800", "purple.300");
+  const bgColor = useColorModeValue("purple.100", "purple.900");
 
   return (
-    <Box position="sticky" top="0px" w="100%" zIndex="200">
+    <Box position="sticky" top="0px" w="100%" zIndex="200" bg={bgColor}>
       <Flex
         color={color}
         py={{ base: 2 }}

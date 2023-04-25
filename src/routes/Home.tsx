@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, VStack, Heading, Flex } from "@chakra-ui/react";
+import { VStack, Heading, Flex } from "@chakra-ui/react";
 import { TypeAnimation } from "react-type-animation";
 
 export default function Home() {
@@ -16,9 +16,9 @@ export default function Home() {
           />
         </Heading>
         {/* <Logo h="40vmin" pointerEvents="none" /> */}
-        <Text align="left">
+        <Heading size="md" textAlign="left">
           {"My name is Madison & I'm a software engineer based in Atlanta, GA."}
-        </Text>
+        </Heading>
       </VStack>
     </Flex>
   );
