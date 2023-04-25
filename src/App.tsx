@@ -1,6 +1,6 @@
 import { Outlet, useLocation } from "react-router-dom";
 
-import { ChakraProvider, Box, ScaleFade } from "@chakra-ui/react";
+import { ChakraProvider, Box, ScaleFade, Container } from "@chakra-ui/react";
 
 import NavBar from "./components/navigation/NavBar";
 import appTheme from "./theme";
@@ -12,11 +12,11 @@ export default function App() {
     <ChakraProvider theme={appTheme}>
       <Box textAlign="center" fontSize="xl">
         <NavBar />
-        <Box>
+        <Container as="main" mt="20">
           <ScaleFade key={location.pathname} initialScale={0.9} in={true}>
             <Outlet />
           </ScaleFade>
-        </Box>
+        </Container>
       </Box>
     </ChakraProvider>
   );

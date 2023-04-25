@@ -1,25 +1,33 @@
 import { ReactNode } from "react";
 import { Link as RouteLink } from "react-router-dom";
 
-import { Link, useColorModeValue } from "@chakra-ui/react";
+import { Link } from "@chakra-ui/react";
 
-type StyledLinkProps = { label?: string; href: string; children?: ReactNode };
+type StyledLinkProps = {
+  label?: string;
+  href: string;
+  children?: ReactNode;
+  color?: string;
+  hoverColor?: string;
+};
 
-export default function StyledLink({ label, href, children }: StyledLinkProps) {
-  const linkColor = useColorModeValue("gray.600", "gray.200");
-  const linkHoverColor = useColorModeValue("gray.800", "white");
-
+export default function StyledLink({
+  label,
+  href,
+  children,
+  color,
+  hoverColor,
+}: StyledLinkProps) {
   return (
     <RouteLink to={href}>
       <Link
-        p={2}
         href={href ?? "#"}
-        fontSize={"sm"}
+        fontSize={"lg"}
         fontWeight={500}
-        color={linkColor}
+        color={color}
         _hover={{
           textDecoration: "none",
-          color: linkHoverColor,
+          color: hoverColor,
         }}
       >
         {children || label}
@@ -31,4 +39,6 @@ export default function StyledLink({ label, href, children }: StyledLinkProps) {
 StyledLink.defaultProps = {
   label: "",
   children: null,
+  color: "black",
+  hoverColor: "grey.500",
 };

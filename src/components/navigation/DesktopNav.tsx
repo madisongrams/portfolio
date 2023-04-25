@@ -1,37 +1,32 @@
-import { Box, Stack, Popover, PopoverTrigger } from "@chakra-ui/react";
+import { Box, Stack } from "@chakra-ui/react";
 
 import StyledLink from "../StyledLink";
 
 import { NAV_ITEMS } from "./nav-items";
 
-export default function DesktopNav() {
+type DesktopNavProps = {
+  color?: string;
+  hoverColor?: string;
+};
+
+export default function DesktopNav({ color, hoverColor }: DesktopNavProps) {
   return (
-    <Stack direction={"row"} spacing={4}>
+    <Stack direction={"row"} spacing={10}>
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label}>
-          <Popover trigger={"hover"} placement={"bottom-start"}>
-            <PopoverTrigger>
-              <StyledLink label={navItem.label} href={navItem.href ?? "#"} />
-            </PopoverTrigger>
-
-            {/* {navItem.children && (
-                <PopoverContent
-                  border={0}
-                  boxShadow={'xl'}
-                  bg={popoverContentBgColor}
-                  p={4}
-                  rounded={'xl'}
-                  minW={'sm'}>
-                  <Stack>
-                    {navItem.children.map((child) => (
-                      <DesktopSubNav key={child.label} {...child} />
-                    ))}
-                  </Stack>
-                </PopoverContent>
-              )} */}
-          </Popover>
+          <StyledLink
+            label={navItem.label}
+            href={navItem.href ?? "#"}
+            color={color}
+            hoverColor={hoverColor}
+          />
         </Box>
       ))}
     </Stack>
   );
 }
+
+DesktopNav.defaultProps = {
+  color: "black",
+  hoverColor: "grey.500",
+};

@@ -1,39 +1,41 @@
 import {
   Box,
   Flex,
-  Text,
   IconButton,
   Collapse,
   useColorModeValue,
-  useBreakpointValue,
   useDisclosure,
+  Icon,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import { GiBlackCat } from "react-icons/gi";
+import { Link as RouteLink } from "react-router-dom";
 
 import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
 import ColorModeSwitcher from "../ColorModeSwitcher";
-import StyledLink from "../StyledLink";
 
 export default function NavBar() {
   const { isOpen, onToggle } = useDisclosure();
+  const color = useColorModeValue("purple.600", "purple.100");
+  const hoverColor = useColorModeValue("purple.800", "purple.300");
 
   return (
-    <Box>
+    <Box position="sticky" top="0px" w="100%" zIndex="200">
       <Flex
-        color={useColorModeValue("purple.600", "white")}
-        minH={"60px"}
+        color={color}
         py={{ base: 2 }}
         px={{ base: 4 }}
         borderBottom={1}
         borderStyle={"solid"}
-        borderColor={useColorModeValue("teal.400", "teal.200")}
+        borderColor={color}
         align={"center"}
       >
         <Flex
           flex={{ base: 1, md: "auto" }}
           ml={{ base: -2 }}
           display={{ base: "flex", md: "none" }}
+          align={"center"}
         >
           <IconButton
             onClick={onToggle}
@@ -45,16 +47,19 @@ export default function NavBar() {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-          <StyledLink href="/">
-            <Text
-              textAlign={useBreakpointValue({ base: "center", md: "left" })}
-            >
-              MG
-            </Text>
-          </StyledLink>
+          <RouteLink to="/">
+            <Icon
+              as={GiBlackCat}
+              boxSize={10}
+              color={color}
+              _hover={{
+                color: hoverColor,
+              }}
+            />
+          </RouteLink>
 
-          <Flex display={{ base: "none", md: "flex" }} ml={10}>
-            <DesktopNav />
+          <Flex display={{ base: "none", md: "flex" }} ml={10} align={"center"}>
+            <DesktopNav color={color} hoverColor={hoverColor} />
           </Flex>
         </Flex>
         <ColorModeSwitcher />

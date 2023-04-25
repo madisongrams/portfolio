@@ -1,6 +1,9 @@
 import { extendTheme, StyleFunctionProps } from "@chakra-ui/react";
 
 const appTheme = extendTheme({
+  config: {
+    initialColorMode: "system",
+  },
   styles: {
     global: (props: StyleFunctionProps) => ({
       body: {
