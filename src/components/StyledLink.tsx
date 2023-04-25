@@ -1,24 +1,5 @@
-import {
-	Box,
-	Flex,
-	Text,
-	IconButton,
-	Button,
-	Stack,
-	Collapse,
-	Icon,
-	Link,
-	Popover,
-	PopoverTrigger,
-	PopoverContent,
-	useColorModeValue,
-	useBreakpointValue,
-	useDisclosure,
-} from '@chakra-ui/react';
-import { 
-	Outlet,
-	Link as RouteLink
-} from 'react-router-dom';
+import { Link, useColorModeValue } from "@chakra-ui/react";
+import { Link as RouteLink } from "react-router-dom";
 
 type StyledLinkProps = { label: string, href: string};
 

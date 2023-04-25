@@ -1,49 +1,24 @@
 import {
-    Box,
-    Flex,
-    Text,
-    IconButton,
-    Button,
-    Stack,
-    Collapse,
-    Icon,
-    Link,
-    Popover,
-    PopoverTrigger,
-    PopoverContent,
-    useColorModeValue,
-    useBreakpointValue,
-    useDisclosure,
-  } from '@chakra-ui/react';
-  import {
-    HamburgerIcon,
-    CloseIcon,
-    ChevronDownIcon,
-    ChevronRightIcon,
-  } from '@chakra-ui/icons';
-import { NAV_ITEMS } from './nav-items';
-import DesktopSubNav from './DesktopSubNav';
+  Box,
+  Stack,
+  Popover,
+  PopoverTrigger,
+  useColorModeValue,
+} from "@chakra-ui/react";
+import { NAV_ITEMS } from "./nav-items";
 import StyledLink from '../StyledLink';
 
 export default function DesktopNav() {
-    const linkColor = useColorModeValue('gray.600', 'gray.200');
-    const linkHoverColor = useColorModeValue('gray.800', 'white');
-    const popoverContentBgColor = useColorModeValue('white', 'gray.800');
-  
-    return (
-      <Stack direction={'row'} spacing={4}>
-        {NAV_ITEMS.map((navItem) => (
-          <Box key={navItem.label}>
-            <Popover trigger={'hover'} placement={'bottom-start'}>
-              <PopoverTrigger>
-                <StyledLink
-                  label={navItem.label}
-                  href={navItem.href ?? '#'}
-                  />
-                
-              </PopoverTrigger>
-  
-              {/* {navItem.children && (
+  return (
+    <Stack direction={"row"} spacing={4}>
+      {NAV_ITEMS.map((navItem) => (
+        <Box key={navItem.label}>
+          <Popover trigger={"hover"} placement={"bottom-start"}>
+            <PopoverTrigger>
+              <StyledLink label={navItem.label} href={navItem.href ?? "#"} />
+            </PopoverTrigger>
+
+            {/* {navItem.children && (
                 <PopoverContent
                   border={0}
                   boxShadow={'xl'}
@@ -58,9 +33,9 @@ export default function DesktopNav() {
                   </Stack>
                 </PopoverContent>
               )} */}
-            </Popover>
-          </Box>
-        ))}
-      </Stack>
-    );
-  };
+          </Popover>
+        </Box>
+      ))}
+    </Stack>
+  );
+};
