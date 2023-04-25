@@ -1,25 +1,24 @@
 import React from "react";
-import { VStack, Heading, Flex } from "@chakra-ui/react";
-import { TypeAnimation } from "react-type-animation";
+import { VStack, Flex, useColorModeValue, Icon } from "@chakra-ui/react";
+
+import "../static/custom-cursor.css";
+import Terminal from "../components/Terminal";
+import { GiBlackCat } from "react-icons/gi";
 
 export default function Home() {
+  const color = useColorModeValue("purple.600", "purple.100");
+
   return (
     <Flex>
-      <VStack spacing={8} align="stretch">
-        <Heading size={{ base: "2xl", md: "3xl" }}>
-          <TypeAnimation
-            sequence={["Welcome.", 1000]}
-            wrapper="span"
-            cursor={true}
-            speed={{ type: "keyStrokeDelayInMs", value: 100 }}
-            style={{ fontSize: "2em", display: "inline-block" }}
-          />
-        </Heading>
-        {/* <Logo h="40vmin" pointerEvents="none" /> */}
-        <Heading size="md" textAlign="left">
-          {"My name is Madison & I'm a software engineer based in Atlanta, GA."}
-        </Heading>
-      </VStack>
+      <Icon
+        position="absolute"
+        as={GiBlackCat}
+        boxSize={100}
+        color={color}
+        display="block"
+        zIndex={888}
+      />
+      <Terminal />
     </Flex>
   );
 }
