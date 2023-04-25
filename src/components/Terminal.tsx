@@ -1,5 +1,5 @@
 import React from "react";
-import { VStack, Heading, Flex, Box, Text } from "@chakra-ui/react";
+import { Heading, Flex, Box } from "@chakra-ui/react";
 import { TypeAnimation } from "react-type-animation";
 
 import "../static/custom-cursor.css";

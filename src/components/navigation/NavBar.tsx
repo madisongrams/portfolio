@@ -22,7 +22,7 @@ export default function NavBar() {
   const bgColor = useColorModeValue("purple.100", "purple.900");
 
   return (
-    <Box position="sticky" top="0px" w="100%" zIndex="200" bg={bgColor}>
+    <Box position="sticky" top="0px" w="100%" zIndex="999" bg={bgColor}>
       <Flex
         color={color}
         py={{ base: 2 }}
