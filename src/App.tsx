@@ -12,7 +12,7 @@ export default function App() {
     <ChakraProvider theme={appTheme}>
       <Box textAlign="center" fontSize="xl">
         <NavBar />
-        <Container as="main" mt="20">
+        <Container as="main" marginTop="10" centerContent>
           <ScaleFade key={location.pathname} initialScale={0.9} in={true}>
             <Outlet />
           </ScaleFade>

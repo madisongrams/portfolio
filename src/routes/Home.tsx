@@ -1,16 +1,17 @@
 import React from "react";
-import { Box, Text, VStack, Code } from "@chakra-ui/react";
+import { Box, Text, VStack, Code, Heading, Flex } from "@chakra-ui/react";
 import Logo from "../components/Logo";
 
 export default function Home() {
   return (
-    <Box>
-      <VStack spacing={8}>
-        <Logo h="40vmin" pointerEvents="none" />
+    <Flex>
+      <VStack spacing={8} align="stretch">
+        <Heading>Welcome.</Heading>
+        {/* <Logo h="40vmin" pointerEvents="none" /> */}
         <Text>
-          Edit <Code fontSize="xl">src/App.tsx</Code> and save to reload.
+          {"My name is Madison & I'm a software engineer based in Atlanta, GA."}
         </Text>
       </VStack>
-    </Box>
+    </Flex>
   );
 }

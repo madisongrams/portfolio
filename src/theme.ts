@@ -1,8 +1,13 @@
 import { extendTheme, StyleFunctionProps } from "@chakra-ui/react";
+import "@fontsource/major-mono-display";
 
 const appTheme = extendTheme({
   config: {
     initialColorMode: "system",
+  },
+  fonts: {
+    body: "Major Mono Display",
+    heading: "Major Mono Display",
   },
   styles: {
     global: (props: StyleFunctionProps) => ({
