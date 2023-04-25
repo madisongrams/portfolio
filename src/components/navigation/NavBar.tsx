@@ -4,17 +4,16 @@ import {
   Text,
   IconButton,
   Collapse,
-  Link,
   useColorModeValue,
   useBreakpointValue,
   useDisclosure,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+
 import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
-import { ColorModeSwitcher } from "../ColorModeSwitcher";
-
-import { Outlet, Link as RouteLink } from "react-router-dom";
+import ColorModeSwitcher from "../ColorModeSwitcher";
+import StyledLink from "../StyledLink";
 
 export default function NavBar() {
   const { isOpen, onToggle } = useDisclosure();
@@ -22,14 +21,13 @@ export default function NavBar() {
   return (
     <Box>
       <Flex
-        bg={useColorModeValue("white", "gray.800")}
-        color={useColorModeValue("gray.600", "white")}
+        color={useColorModeValue("purple.600", "white")}
         minH={"60px"}
         py={{ base: 2 }}
         px={{ base: 4 }}
         borderBottom={1}
         borderStyle={"solid"}
-        borderColor={useColorModeValue("gray.200", "gray.900")}
+        borderColor={useColorModeValue("teal.400", "teal.200")}
         align={"center"}
       >
         <Flex
@@ -47,31 +45,19 @@ export default function NavBar() {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-          <RouteLink to={"/"}>
-            <Link
-              p={2}
-              fontFamily={"heading"}
-              fontSize={"sm"}
-              fontWeight={500}
-              color={useColorModeValue("gray.800", "white")}
-              _hover={{
-                textDecoration: "none",
-                color: useColorModeValue("gray.600", "gray.200"),
-              }}
+          <StyledLink href="/">
+            <Text
+              textAlign={useBreakpointValue({ base: "center", md: "left" })}
             >
-              <Text
-                textAlign={useBreakpointValue({ base: "center", md: "left" })}
-              >
-                MG
-              </Text>
-            </Link>
-          </RouteLink>
+              MG
+            </Text>
+          </StyledLink>
 
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
             <DesktopNav />
           </Flex>
         </Flex>
-        <ColorModeSwitcher justifySelf="flex-end" />
+        <ColorModeSwitcher />
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>

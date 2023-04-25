@@ -1,12 +1,15 @@
 import { Outlet, useLocation } from "react-router-dom";
-import { ChakraProvider, Box, theme, ScaleFade } from "@chakra-ui/react";
+
+import { ChakraProvider, Box, ScaleFade } from "@chakra-ui/react";
+
 import NavBar from "./components/navigation/NavBar";
+import appTheme from "./theme";
 
 export default function App() {
   const location = useLocation();
 
   return (
-    <ChakraProvider theme={theme}>
+    <ChakraProvider theme={appTheme}>
       <Box textAlign="center" fontSize="xl">
         <NavBar />
         <Box>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Text, VStack, Code } from "@chakra-ui/react";
-import { Logo } from "../components/Logo";
+import Logo from "../components/Logo";
 
 export default function Home() {
   return (

@@ -1,12 +1,8 @@
-import {
-  Box,
-  Stack,
-  Popover,
-  PopoverTrigger,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Box, Stack, Popover, PopoverTrigger } from "@chakra-ui/react";
+
+import StyledLink from "../StyledLink";
+
 import { NAV_ITEMS } from "./nav-items";
-import StyledLink from '../StyledLink';
 
 export default function DesktopNav() {
   return (
@@ -38,4 +34,4 @@ export default function DesktopNav() {
       ))}
     </Stack>
   );
-};
+}

@@ -1,18 +1,23 @@
-import { ColorModeScript } from "@chakra-ui/react";
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+import { ColorModeScript } from "@chakra-ui/react";
+
 import App from "./App";
 import About from "./routes/About";
-import reportWebVitals from "./reportWebVitals";
-import * as serviceWorker from "./serviceWorker";
 import Home from "./routes/Home";
 import Contact from "./routes/Contact";
 import Resume from "./routes/Resume";
 
+import reportWebVitals from "./reportWebVitals";
+import * as serviceWorker from "./serviceWorker";
+
 const container = document.getElementById("root");
-if (!container) throw new Error("Failed to find the root element");
+if (!container) {
+  throw new Error("Failed to find the root element");
+}
+
 const root = ReactDOM.createRoot(container);
 
 const router = createBrowserRouter([
