@@ -1,6 +1,6 @@
 import { Link as RouteLink } from "react-router-dom";
 
-import { Flex, Text, Stack, Link, useColorModeValue } from "@chakra-ui/react";
+import { Flex, Text, Stack, Link } from "@chakra-ui/react";
 
 import { NavItem } from "./nav-items";
 
