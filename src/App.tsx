@@ -7,9 +7,7 @@ import {
   ScaleFade,
   Container,
   Image,
-  Text,
   Heading,
-  useColorModeValue,
 } from "@chakra-ui/react";
 
 import NavBar from "./components/navigation/NavBar";
@@ -18,10 +16,9 @@ import Footer from "./components/Footer";
 import { useEffect, useState } from "react";
 
 import "./static/cat-running.css";
+import { TypeAnimation } from "react-type-animation";
 
 export default function App() {
-  const bgColor = useColorModeValue("purple.100", "purple.900");
-
   const [loaded, setLoaded] = useState(false);
   const location = useLocation();
 
@@ -75,7 +72,30 @@ export default function App() {
               boxSize="36"
               className="cat-running-gif"
             />
-            <Heading size="lg"> Loading...</Heading>
+            <Heading size="lg">
+              Loading
+              <TypeAnimation
+                sequence={[
+                  250,
+                  ".",
+                  250,
+                  "..",
+                  250,
+                  "...",
+                  250,
+                  "..",
+                  250,
+                  ".",
+                  250,
+                  "",
+                  250,
+                ]}
+                wrapper="span"
+                cursor={false}
+                repeat={Number.POSITIVE_INFINITY}
+                style={{ whiteSpace: "pre-line" }}
+              />
+            </Heading>
           </Container>
         )}
       </AnimatePresence>

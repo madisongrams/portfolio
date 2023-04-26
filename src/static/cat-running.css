@@ -6,5 +6,4 @@
   image-rendering: pixelated;                 /* Universal support since 2021   */
   image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
   -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
-
 }
