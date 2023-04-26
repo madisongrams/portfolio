@@ -12,7 +12,6 @@ import Resume from "./routes/Resume";
 
 import reportWebVitals from "./reportWebVitals";
 import * as serviceWorker from "./serviceWorker";
-import appTheme from "./theme";
 
 const container = document.getElementById("root");
 if (!container) {

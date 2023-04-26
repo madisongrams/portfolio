@@ -1,6 +1,7 @@
 import React from "react";
-import { Heading, Flex, Box, useColorModeValue } from "@chakra-ui/react";
 import { TypeAnimation } from "react-type-animation";
+
+import { Heading, Flex, Box, useColorModeValue } from "@chakra-ui/react";
 
 import "../static/custom-cursor.css";
 

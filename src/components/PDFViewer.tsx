@@ -1,11 +1,11 @@
-import { Box, Heading } from "@chakra-ui/react";
 import { useCallback, useState } from "react";
 import { Document, Page } from "react-pdf/dist/esm/entry.webpack5";
+
+import { Box } from "@chakra-ui/react";
+
 import PDFViewButtons from "./PDFViewerButtons";
 
-// import ResumePDF from "../static/resume.pdf";
-
-type bla = {
+type PDFDocumentProps = {
   numPages: number;
 };
 
@@ -13,7 +13,7 @@ export default function PDFViewer() {
   const [numPages, setNumPages] = useState(0);
   const [pageNumber, setPageNumber] = useState(1);
 
-  function onDocumentLoadSuccess({ numPages: _numPages }: bla) {
+  function onDocumentLoadSuccess({ numPages: _numPages }: PDFDocumentProps) {
     setNumPages(_numPages);
   }
   const changePage = useCallback(

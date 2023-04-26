@@ -1,10 +1,7 @@
-import { Box, Button, Flex, Heading } from "@chakra-ui/react";
-import { useCallback, useState } from "react";
-import { Document, Page } from "react-pdf/dist/esm/entry.webpack5";
+import { Button, Flex } from "@chakra-ui/react";
+import { useCallback } from "react";
 
-// import ResumePDF from "../static/resume.pdf";
-
-type bla = {
+type PDFViewButtonsProps = {
   pageNumber: number;
   numPages: number;
   changePage: (arg0: number) => void;
@@ -14,7 +11,7 @@ export default function PDFViewButtons({
   pageNumber,
   numPages,
   changePage,
-}: bla) {
+}: PDFViewButtonsProps) {
   const previousPage = useCallback(() => changePage(-1), [changePage]);
   const nextPage = useCallback(() => changePage(1), [changePage]);
 

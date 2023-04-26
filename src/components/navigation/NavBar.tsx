@@ -1,19 +1,16 @@
 import {
   Box,
   Flex,
-  IconButton,
   Collapse,
   useColorModeValue,
   useDisclosure,
-  Icon,
 } from "@chakra-ui/react";
-import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-import { GiBlackCat } from "react-icons/gi";
-import { Link as RouteLink } from "react-router-dom";
 
 import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
-import ColorModeSwitcher from "../ColorModeSwitcher";
+import ColorModeSwitcher from "./ColorModeSwitcher";
+import NavBarToggle from "./NavBarToggle";
+import LogoButton from "./LogoButton";
 
 export default function NavBar() {
   const { isOpen, onToggle } = useDisclosure();
@@ -32,32 +29,9 @@ export default function NavBar() {
         borderColor={color}
         align={"center"}
       >
-        <Flex
-          flex={{ base: 1, md: "auto" }}
-          ml={{ base: -2 }}
-          display={{ base: "flex", md: "none" }}
-          align={"center"}
-        >
-          <IconButton
-            onClick={onToggle}
-            icon={
-              isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
-            }
-            variant={"ghost"}
-            aria-label={"Toggle Navigation"}
-          />
-        </Flex>
+        <NavBarToggle isOpen={isOpen} onToggle={onToggle} />
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-          <RouteLink to="/">
-            <Icon
-              as={GiBlackCat}
-              boxSize={10}
-              color={color}
-              _hover={{
-                color: hoverColor,
-              }}
-            />
-          </RouteLink>
+          <LogoButton color={color} hoverColor={hoverColor} />
 
           <Flex display={{ base: "none", md: "flex" }} ml={10} align={"center"}>
             <DesktopNav color={color} hoverColor={hoverColor} />
