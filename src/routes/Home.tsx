@@ -1,9 +1,11 @@
 import React from "react";
-import { VStack, Flex, useColorModeValue, Icon } from "@chakra-ui/react";
+import { Flex, useColorModeValue, Icon } from "@chakra-ui/react";
 
-import "../static/custom-cursor.css";
 import Terminal from "../components/Terminal";
 import { GiBlackCat } from "react-icons/gi";
+
+import "../static/custom-cursor.css";
+
 
 export default function Home() {
   const color = useColorModeValue("purple.600", "purple.100");

@@ -7,25 +7,32 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { GiBlackCat } from "react-icons/gi";
 
 export default function Footer() {
-  const color = useColorModeValue("purple.600", "purple.100");
+  const color = useColorModeValue("purple.800", "purple.100");
+
+  const bgColor = useColorModeValue("purple.300", "purple.800");
 
   return (
     <Container
       as="footer"
       role="contentinfo"
-      bg="purple.800"
+      bg={bgColor}
       py={{ base: "12", md: "5" }}
       bottom={0}
       minWidth="100%"
       centerContent
+      position="absolute"
+      color={color}
+      sx={{
+        clear: "both",
+      }}
     >
       <Stack justify="space-between" width="80%" height="5rem">
         <Stack justify="space-between" direction="row" align="center">
-          <Icon as={GiBlackCat} boxSize={14} color={color} />
+          <Icon as={GiBlackCat} boxSize={14} />
           <ButtonGroup variant="ghost">
             <IconButton
               as="a"
@@ -47,7 +54,7 @@ export default function Footer() {
             /> */}
           </ButtonGroup>
         </Stack>
-        <Text fontSize="sm" color="subtle">
+        <Text fontSize="sm">
           &copy; {new Date().getFullYear()} Madison Grams. All rights reserved.
         </Text>
       </Stack>

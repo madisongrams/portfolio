@@ -1,35 +1,39 @@
 import React from "react";
-import { Heading, Flex, Box } from "@chakra-ui/react";
+import { Heading, Flex, Box, useColorModeValue } from "@chakra-ui/react";
 import { TypeAnimation } from "react-type-animation";
 
 import "../static/custom-cursor.css";
 
 export default function Terminal() {
+  const bgColor = useColorModeValue("whiteAlpha.500", "blackAlpha.500");
+  const boxShadow = useColorModeValue("lg", "dark-lg");
+  const borderColor = useColorModeValue("purple.600", "purple.100");
+
   return (
     <Flex
       position="relative"
       flexDirection="row"
-      bg="blackAlpha.500"
+      bg={bgColor}
       paddingBottom="10"
       paddingLeft="5"
       height={"8rem"}
       textAlign={"left"}
-      width="50rem"
+      width={{ base: "50%", md: "50rem" }}
       alignItems="flex-end"
       borderRadius={10}
       borderWidth="1px"
-      borderColor={"purple.100"}
-      boxShadow="dark-lg"
+      borderColor={borderColor}
+      boxShadow={boxShadow}
       marginTop={"4.3rem"}
     >
       <Box justifySelf="start" marginRight={3} height="4rem">
-        <Heading size={{ base: "2xl", md: "sm" }} fontFamily="mono">
+        <Heading size={{ base: "xs", md: "sm" }} fontFamily="mono">
           {"~/src>"}
         </Heading>
       </Box>
 
       <Box width="40rem" height="4rem">
-        <Heading size={{ base: "2xl", md: "sm" }}>
+        <Heading size={{ base: "xs", md: "sm" }}>
           <TypeAnimation
             sequence={[
               500,
