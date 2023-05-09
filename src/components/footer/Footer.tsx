@@ -21,7 +21,6 @@ export default function Footer() {
       bottom={0}
       minWidth="100%"
       centerContent
-      position="absolute"
       color={color}
       sx={{
         clear: "both",
