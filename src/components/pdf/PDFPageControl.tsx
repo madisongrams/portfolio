@@ -1,6 +1,6 @@
 import { useCallback } from "react";
 
-import { Button, HStack, Text } from "@chakra-ui/react";
+import { Button, HStack, Text, useColorModeValue } from "@chakra-ui/react";
 
 import "../../static/pdf-viewer.css";
 
@@ -32,23 +32,20 @@ export default function PDFPageControl({
       transition="opacity ease-in-out 0.2s"
       borderRadius="10px"
       opacity={0}
-      bgColor={"purple.200"}
-      color="purple.600"
+      bgColor={useColorModeValue("purple.500", "purple.200")}
       fontSize={"sm"}
     >
       <Button
-        color="purple.600"
         colorScheme="purple"
         isDisabled={curPageNumber <= 1}
         onClick={previousPage}
       >
         {"<"}
       </Button>
-      <Text color="purple.600">{`${
+      <Text color={useColorModeValue("purple.50", "purple.900")}>{`${
         curPageNumber || numPagesString
       } of ${numPagesString}`}</Text>
       <Button
-        color="purple.600"
         colorScheme="purple"
         isDisabled={curPageNumber >= (numPages || 0)}
         onClick={nextPage}

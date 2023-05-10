@@ -12,11 +12,10 @@ export default function PDFDownloadButton() {
       transition="opacity ease-in-out 0.2s"
       borderRadius="10px"
       opacity={0}
-      bgColor={"purple.200"}
-      color="purple.600"
       fontSize={"sm"}
     >
       <IconButton
+        colorScheme="purple"
         aria-label="Download"
         icon={<DownloadIcon />}
         as="a"
