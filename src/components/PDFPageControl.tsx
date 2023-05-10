@@ -4,17 +4,17 @@ import { Button, HStack, Text } from "@chakra-ui/react";
 
 import "../static/pdf-viewer.css";
 
-type PDFViewButtonsProps = {
+type PDFPageControlProps = {
   pageNumber: number;
   numPages: number;
   changePage: (arg0: number) => void;
 };
 
-export default function PDFViewButtons({
+export default function PDFPageControl({
   pageNumber,
   numPages,
   changePage,
-}: PDFViewButtonsProps) {
+}: PDFPageControlProps) {
   const previousPage = useCallback(() => changePage(-1), [changePage]);
   const nextPage = useCallback(() => changePage(1), [changePage]);
 
@@ -29,7 +29,7 @@ export default function PDFViewButtons({
       maxWidth={"100%"}
       marginTop={"1em"}
       left="50%"
-      zIndex={99999}
+      // zIndex={99999}
       transform="translateX(-50%)"
       transition="opacity ease-in-out 0.2s"
       borderRadius="10px"

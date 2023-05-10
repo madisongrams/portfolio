@@ -10,6 +10,10 @@
   opacity: 1;
 }
 
+.react-pdf__Document:hover .download-button {
+  opacity: 1;
+}
+
 .page-controls button:first-child {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;

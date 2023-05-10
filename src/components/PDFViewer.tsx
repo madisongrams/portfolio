@@ -3,9 +3,10 @@ import { Document, Page } from "react-pdf/dist/esm/entry.webpack5";
 
 import { Container } from "@chakra-ui/react";
 
-import PDFViewButtons from "./PDFViewerButtons";
+import PDFPageControl from "./PDFPageControl";
 
 import "../static/pdf-viewer.css";
+import PDFDownloadButton from "./PDFDownloadButton";
 
 type PDFDocumentProps = {
   numPages: number;
@@ -40,11 +41,12 @@ export default function PDFViewer() {
           renderAnnotationLayer={false}
         />
 
-        <PDFViewButtons
+        <PDFPageControl
           pageNumber={pageNumber}
           numPages={numPages}
           changePage={changePage}
         />
+        <PDFDownloadButton />
       </Document>
     </Container>
   );
