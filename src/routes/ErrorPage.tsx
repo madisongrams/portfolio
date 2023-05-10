@@ -1,10 +1,4 @@
-import {
-  AbsoluteCenter,
-  Center,
-  Container,
-  Heading,
-  Text,
-} from "@chakra-ui/react";
+import { Container, Heading, Text } from "@chakra-ui/react";
 import { isRouteErrorResponse, useRouteError } from "react-router-dom";
 
 export default function ErrorPage() {
