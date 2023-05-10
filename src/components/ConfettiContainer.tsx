@@ -1,12 +1,7 @@
 import { ReactNode } from "react";
 
-import {
-  Box,
-  Flex,
-  Heading,
-  VStack,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Box, Flex, VStack, useColorModeValue } from "@chakra-ui/react";
+import PageHeading from "./PageHeading";
 
 const confetti = {
   light: {
@@ -42,15 +37,7 @@ export default function ConfettiContainer({ title, children }: Props) {
       <Box borderRadius="lg" m={{ base: 5, md: 16, lg: 10 }} p={{ base: 5 }}>
         <Box>
           <VStack spacing={{ base: 4, md: 8 }}>
-            <Heading
-              fontSize={{
-                base: "4xl",
-                md: "5xl",
-              }}
-              color={useColorModeValue("purple.800", "purple.100")}
-            >
-              {title}
-            </Heading>
+            <PageHeading>{title}</PageHeading>
 
             {children}
           </VStack>

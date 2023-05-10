@@ -23,10 +23,10 @@ const appTheme = extendTheme({
         bg: getBackgroundColor(props.colorMode),
       },
       heading: {
-        color: props.colorMode === "dark" ? "purple.600" : "purple.100",
+        color: props.colorMode === "dark" ? "purple.100" : "purple.600",
       },
       p: {
-        color: props.colorMode === "dark" ? "purple.600" : "purple.100",
+        color: props.colorMode === "dark" ? "purple.100" : "purple.600",
       },
     }),
   },

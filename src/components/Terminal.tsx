@@ -9,6 +9,7 @@ export default function Terminal() {
   const bgColor = useColorModeValue("whiteAlpha.500", "blackAlpha.500");
   const boxShadow = useColorModeValue("lg", "dark-lg");
   const borderColor = useColorModeValue("purple.600", "purple.100");
+  const textColor = useColorModeValue("purple.600", "purple.50");
 
   return (
     <Flex
@@ -28,13 +29,17 @@ export default function Terminal() {
       marginTop={"4.3rem"}
     >
       <Box justifySelf="start" marginRight={3} height="4rem">
-        <Heading size={{ base: "xs", md: "sm" }} fontFamily="mono">
+        <Heading
+          size={{ base: "xs", md: "sm" }}
+          fontFamily="mono"
+          color={textColor}
+        >
           {"~/src>"}
         </Heading>
       </Box>
 
       <Box width="40rem" height="4rem">
-        <Heading size={{ base: "xs", md: "sm" }}>
+        <Heading size={{ base: "xs", md: "sm" }} color={textColor}>
           <TypeAnimation
             sequence={[
               500,

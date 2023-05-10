@@ -1,10 +1,11 @@
-import { Box, Heading } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import PDFViewer from "../components/pdf/PDFViewer";
+import PageHeading from "../components/PageHeading";
 
 export default function Resume() {
   return (
     <Box>
-      <Heading> Resume</Heading>
+      <PageHeading> Resume</PageHeading>
       <PDFViewer />
     </Box>
   );
