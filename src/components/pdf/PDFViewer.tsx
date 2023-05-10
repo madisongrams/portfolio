@@ -4,9 +4,9 @@ import { Document, Page } from "react-pdf/dist/esm/entry.webpack5";
 import { Container } from "@chakra-ui/react";
 
 import PDFPageControl from "./PDFPageControl";
-
-import "../static/pdf-viewer.css";
 import PDFDownloadButton from "./PDFDownloadButton";
+
+import "../../static/pdf-viewer.css";
 
 type PDFDocumentProps = {
   numPages: number;

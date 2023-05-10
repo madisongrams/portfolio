@@ -1,5 +1,5 @@
 import { Box, Heading } from "@chakra-ui/react";
-import PDFViewer from "../components/PDFViewer";
+import PDFViewer from "../components/pdf/PDFViewer";
 
 export default function Resume() {
   return (

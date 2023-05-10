@@ -2,7 +2,7 @@ import { useCallback } from "react";
 
 import { Button, HStack, Text } from "@chakra-ui/react";
 
-import "../static/pdf-viewer.css";
+import "../../static/pdf-viewer.css";
 
 type PDFPageControlProps = {
   pageNumber: number;
@@ -27,9 +27,7 @@ export default function PDFPageControl({
       position="absolute"
       bottom="5%"
       maxWidth={"100%"}
-      marginTop={"1em"}
       left="50%"
-      // zIndex={99999}
       transform="translateX(-50%)"
       transition="opacity ease-in-out 0.2s"
       borderRadius="10px"
