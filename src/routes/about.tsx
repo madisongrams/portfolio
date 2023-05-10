@@ -3,8 +3,7 @@ import ConfettiContainer from "../components/ConfettiContainer";
 
 export default function About() {
   return (
-    <ConfettiContainer>
-      <Heading>About</Heading>
+    <ConfettiContainer title="About Me">
       <Container bgColor={"purple.700"} borderRadius={"5px"} marginTop="10">
         <VStack fontFamily="mono" spacing={8} padding="10" color="purple.100">
           <Text color="purple.200">
