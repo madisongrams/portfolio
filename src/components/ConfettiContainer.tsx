@@ -38,13 +38,8 @@ export default function ConfettiContainer({ title, children }: Props) {
         backgroundImage: useColorModeValue(CONFETTI_LIGHT, CONFETTI_DARK),
         backgroundAttachment: "fixed",
       }}
-      id="contact"
     >
-      <Box
-        borderRadius="lg"
-        m={{ base: 5, md: 16, lg: 10 }}
-        p={{ base: 5, lg: 16 }}
-      >
+      <Box borderRadius="lg" m={{ base: 5, md: 16, lg: 10 }} p={{ base: 5 }}>
         <Box>
           <VStack spacing={{ base: 4, md: 8 }}>
             <Heading
