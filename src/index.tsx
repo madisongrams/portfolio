@@ -2,7 +2,7 @@ import * as React from "react";
 import * as ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import { ColorModeScript } from "@chakra-ui/react";
+import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
 
 import App from "./App";
 import About from "./routes/About";
@@ -12,6 +12,9 @@ import Resume from "./routes/Resume";
 
 import reportWebVitals from "./reportWebVitals";
 import * as serviceWorker from "./serviceWorker";
+import ErrorPage from "./routes/ErrorPage";
+
+import appTheme from "./theme";
 
 const container = document.getElementById("root");
 if (!container) {
@@ -24,6 +27,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
@@ -48,7 +52,9 @@ const router = createBrowserRouter([
 root.render(
   <React.StrictMode>
     <ColorModeScript />
-    <RouterProvider router={router} />
+    <ChakraProvider theme={appTheme}>
+      <RouterProvider router={router} />
+    </ChakraProvider>
   </React.StrictMode>
 );
 
