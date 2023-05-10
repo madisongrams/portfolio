@@ -1,8 +1,9 @@
-import { Box, Container, Heading, Text, VStack } from "@chakra-ui/react";
+import { Container, Heading, Text, VStack } from "@chakra-ui/react";
+import ConfettiContainer from "../components/ConfettiContainer";
 
 export default function About() {
   return (
-    <Box>
+    <ConfettiContainer>
       <Heading>About</Heading>
       <Container bgColor={"purple.700"} borderRadius={"5px"} marginTop="10">
         <VStack fontFamily="mono" spacing={8} padding="10" color="purple.100">
@@ -40,6 +41,6 @@ export default function About() {
           </Text>
         </VStack>
       </Container>
-    </Box>
+    </ConfettiContainer>
   );
 }
