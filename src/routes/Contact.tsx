@@ -1,5 +1,5 @@
-import { Box, Flex, Heading, useColorModeValue } from "@chakra-ui/react";
-import ContactForm from "../components/ContactForm";
+import { Box, Flex, useColorModeValue } from "@chakra-ui/react";
+import ContactForm from "../components/contact/ContactForm";
 
 const confetti = {
   light: {

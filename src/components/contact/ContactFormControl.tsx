@@ -1,36 +1,29 @@
 import {
   Box,
   Button,
-  Flex,
   FormControl,
   FormLabel,
-  Heading,
-  IconButton,
   Input,
   InputGroup,
   InputLeftElement,
-  Link,
-  Stack,
   Textarea,
-  Tooltip,
-  useClipboard,
   useColorModeValue,
   VStack,
 } from "@chakra-ui/react";
 import React from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 import { BsPerson } from "react-icons/bs";
-import { MdEmail, MdOutlineEmail } from "react-icons/md";
-import ContactFormIcons from "./ContactFormIcons";
+import { MdOutlineEmail } from "react-icons/md";
 
 export default function ContactFormControl() {
+  const focusBorderColor = useColorModeValue("purple.500", "purple.300");
+
   return (
     <Box
       bg={useColorModeValue("purple.50", "purple.800")}
       borderRadius="lg"
       p={8}
-      color={useColorModeValue("purple.600", "whiteAlpha.900")}
+      color={useColorModeValue("purple.600", "purple.50")}
       shadow="base"
     >
       <VStack spacing={5}>
@@ -41,7 +34,13 @@ export default function ContactFormControl() {
             <InputLeftElement>
               <BsPerson />
             </InputLeftElement>
-            <Input type="text" name="name" placeholder="Your Name" />
+            <Input
+              focusBorderColor={focusBorderColor}
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              _placeholder={{ color: "inherit", opacity: 0.6 }}
+            />
           </InputGroup>
         </FormControl>
 
@@ -52,7 +51,13 @@ export default function ContactFormControl() {
             <InputLeftElement>
               <MdOutlineEmail />
             </InputLeftElement>
-            <Input type="email" name="email" placeholder="Your Email" />
+            <Input
+              focusBorderColor={focusBorderColor}
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              _placeholder={{ color: "inherit", opacity: 0.6 }}
+            />
           </InputGroup>
         </FormControl>
 
@@ -64,10 +69,12 @@ export default function ContactFormControl() {
             placeholder="Your Message"
             rows={6}
             resize="none"
+            focusBorderColor={focusBorderColor}
+            _placeholder={{ color: "inherit", opacity: 0.6 }}
           />
         </FormControl>
 
-        <Button colorScheme="purple" color="white">
+        <Button colorScheme="purple" variant="outline">
           Send Message
         </Button>
       </VStack>

@@ -1,31 +1,7 @@
-import {
-  Box,
-  Button,
-  Flex,
-  FormControl,
-  FormLabel,
-  Heading,
-  IconButton,
-  Input,
-  InputGroup,
-  InputLeftElement,
-  Link,
-  Stack,
-  Textarea,
-  Tooltip,
-  useClipboard,
-  useColorModeValue,
-  VStack,
-} from "@chakra-ui/react";
+import { Heading, useColorModeValue, VStack } from "@chakra-ui/react";
 import React from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-
-import { BsPerson } from "react-icons/bs";
-import { MdEmail } from "react-icons/md";
 import ContactFormIcons from "./ContactFormIcons";
 import ContactFormControl from "./ContactFormControl";
-
-const EMAIL = "madisongrams.dev@gmail.com";
 
 export default function ContactForm() {
   return (

@@ -16,20 +16,20 @@ export default function StyledLink({
   hoverColor,
 }: StyledLinkProps) {
   return (
-    <RouteLink to={href}>
-      <Link
-        href={href ?? "#"}
-        fontSize={"lg"}
-        fontWeight={500}
-        color={color}
-        _hover={{
-          textDecoration: "none",
-          color: hoverColor,
-        }}
-      >
-        <Heading size="s">{label}</Heading>
-      </Link>
-    </RouteLink>
+    <Link
+      as={RouteLink}
+      to={href}
+      href={href ?? "#"}
+      fontSize={"lg"}
+      fontWeight={500}
+      color={color}
+      _hover={{
+        textDecoration: "none",
+        color: hoverColor,
+      }}
+    >
+      <Heading size="s">{label}</Heading>
+    </Link>
   );
 }
 
