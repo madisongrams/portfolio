@@ -2,10 +2,9 @@ import React from "react";
 import { Flex, useColorModeValue, Icon } from "@chakra-ui/react";
 
 import Terminal from "../components/Terminal";
-import { GiBlackCat } from "react-icons/gi";
+import { GiHollowCat } from "react-icons/gi";
 
 import "../static/custom-cursor.css";
-
 
 export default function Home() {
   const color = useColorModeValue("purple.600", "purple.100");
@@ -14,7 +13,7 @@ export default function Home() {
     <Flex>
       <Icon
         position="absolute"
-        as={GiBlackCat}
+        as={GiHollowCat}
         boxSize={100}
         color={color}
         display="block"

@@ -3,7 +3,6 @@ import "@fontsource/major-mono-display";
 
 
 const getBackgroundColor = (colorMode?: string) => {
-  console.log(colorMode);
   return colorMode === "dark" ? "purple.900" : "purple.100";
 };
 
