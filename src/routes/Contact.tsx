@@ -1,6 +1,6 @@
 import { VStack } from "@chakra-ui/react";
 import ContactFormIcons from "../components/contact/ContactFormIcons";
-import ContactFormControl from "../components/contact/ContactFormControl";
+import ContactForm from "../components/contact/ContactForm";
 import ConfettiContainer from "../components/ConfettiContainer";
 
 export default function Contact() {
@@ -11,7 +11,7 @@ export default function Contact() {
         direction={{ base: "column", md: "row" }}
       >
         <ContactFormIcons />
-        <ContactFormControl />
+        <ContactForm />
       </VStack>
     </ConfettiContainer>
   );

@@ -5,6 +5,7 @@
   "dependencies": {
     "@chakra-ui/icons": "^2.0.18",
     "@chakra-ui/react": "^2.5.5",
+    "@emailjs/browser": "^3.11.0",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@fontsource/major-mono-display": "^4.5.11",
@@ -17,6 +18,7 @@
     "@types/node": "^12.20.55",
     "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11",
+    "dotenv": "^16.0.3",
     "framer-motion": "^6.5.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
