@@ -18,7 +18,7 @@ export default function Terminal() {
       bg={bgColor}
       paddingBottom="10"
       paddingLeft="5"
-      height={"8rem"}
+      height={{ base: "9rem", md: "8rem" }}
       textAlign={"left"}
       width={{ base: "20rem", sm: "25rem", md: "50rem" }}
       alignItems="flex-end"
@@ -28,7 +28,11 @@ export default function Terminal() {
       boxShadow={boxShadow}
       marginTop={"4.3rem"}
     >
-      <Box justifySelf="start" marginRight={3} height="4rem">
+      <Box
+        justifySelf="start"
+        marginRight={3}
+        height={{ base: "5rem", md: "4rem" }}
+      >
         <Heading
           size={{ base: "xs", md: "sm" }}
           fontFamily="mono"
@@ -38,7 +42,10 @@ export default function Terminal() {
         </Heading>
       </Box>
 
-      <Box width="40rem" height="4rem">
+      <Box
+        width={{ base: "15rem", sm: "20rem", md: "40rem" }}
+        height={{ base: "5rem", md: "4rem" }}
+      >
         <Heading size={{ base: "xs", md: "sm" }} color={textColor}>
           <TypeAnimation
             sequence={[
