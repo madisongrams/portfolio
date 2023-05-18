@@ -23,4 +23,8 @@
   border-bottom-left-radius: 0;
 }
 
+.react-pdf__Page.prevPage {
+  position: absolute !important;
+  z-index: 1;
+}
 
