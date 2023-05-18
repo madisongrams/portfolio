@@ -20,7 +20,7 @@ export default function Terminal() {
       paddingLeft="5"
       height={"8rem"}
       textAlign={"left"}
-      width={{ base: "50%", md: "50rem" }}
+      width={{ base: "20rem", sm: "25rem", md: "50rem" }}
       alignItems="flex-end"
       borderRadius={10}
       borderWidth="1px"
