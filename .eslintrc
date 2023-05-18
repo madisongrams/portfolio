@@ -1,7 +1,7 @@
 {
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "requireConfigFile": false,
+    "requireConfigFile": false
   },
   "extends": [
     "eslint:recommended",
@@ -11,7 +11,7 @@
     "plugin:import/recommended",
     "plugin:@typescript-eslint/recommended"
   ],
-  
+
   "rules": {
     // react
     "react/jsx-props-no-spreading": 1,
@@ -92,9 +92,16 @@
     "func-names": [1, "as-needed"]
   },
   // keep these patterns in alphabetical order
-  "ignorePatterns": [],
+  "ignorePatterns": ["public/pdf.worker.js"],
   "globals": {
     "isProduction": "readonly"
   },
-  "plugins": ["unicorn", "react", "react-hooks", "import", "jsx-a11y", "@typescript-eslint"]
+  "plugins": [
+    "unicorn",
+    "react",
+    "react-hooks",
+    "import",
+    "jsx-a11y",
+    "@typescript-eslint"
+  ]
 }
