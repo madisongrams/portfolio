@@ -5,8 +5,8 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { GiHollowCat } from "react-icons/gi";
 import SocialIcons from "./SocialIcons";
+import LogoIcon from "../../static/LogoIcon";
 
 export default function Footer() {
   const color = useColorModeValue("purple.800", "purple.100");
@@ -28,7 +28,7 @@ export default function Footer() {
     >
       <Stack justify="space-between" width="80%" height="5rem">
         <Stack justify="space-between" direction="row" align="center">
-          <Icon as={GiHollowCat} boxSize={14} />
+          <Icon as={LogoIcon} boxSize={14} />
           <SocialIcons />
         </Stack>
         <Text fontSize="sm">

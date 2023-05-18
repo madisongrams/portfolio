@@ -1,4 +1,4 @@
-import { GiHollowCat } from "react-icons/gi";
+import LogoIcon from "../../static/LogoIcon";
 import { Link as RouteLink } from "react-router-dom";
 
 import { Icon } from "@chakra-ui/react";
@@ -12,7 +12,7 @@ export default function LogoButton({ color, hoverColor }: LogoButtonProps) {
   return (
     <RouteLink to="/">
       <Icon
-        as={GiHollowCat}
+        as={LogoIcon}
         boxSize={10}
         color={color}
         _hover={{
