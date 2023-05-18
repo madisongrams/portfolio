@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import { Document, Page } from "react-pdf/dist/esm/entry.webpack5";
+import { Document, Page } from "react-pdf";
 
 import { Container } from "@chakra-ui/react";
 
