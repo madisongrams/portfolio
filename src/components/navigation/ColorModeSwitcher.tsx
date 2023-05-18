@@ -11,7 +11,6 @@ export default function ColorModeSwitcher() {
       size="md"
       fontSize="lg"
       variant="ghost"
-      // color="current"
       marginLeft="2"
       onClick={toggleColorMode}
       icon={<SwitchIcon />}

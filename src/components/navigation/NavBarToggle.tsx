@@ -1,4 +1,4 @@
-import { Flex, IconButton } from "@chakra-ui/react";
+import { IconButton } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 
 type NavBarToggleProps = {
@@ -8,20 +8,16 @@ type NavBarToggleProps = {
 
 export default function NavBarToggle({ onToggle, isOpen }: NavBarToggleProps) {
   return (
-    <Flex
-      flex={{ base: 1, md: "auto" }}
-      ml={{ base: -2 }}
-      display={{ base: "flex", md: "none" }}
-      align={"center"}
-    >
-      <IconButton
-        onClick={onToggle}
-        icon={
-          isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
-        }
-        variant={"ghost"}
-        aria-label={"Toggle Navigation"}
-      />
-    </Flex>
+    <IconButton
+      colorScheme="purple"
+      onClick={onToggle}
+      icon={isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />}
+      variant={"ghost"}
+      size="md"
+      marginLeft="-2"
+      display={{ md: "none" }}
+      justifySelf={"flex-start"}
+      aria-label={"Toggle Navigation"}
+    />
   );
 }

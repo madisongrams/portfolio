@@ -8,7 +8,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { ChangeEvent, useEffect, useState } from "react";
-import { InputProps } from "./contactFormInputs";
+import { InputProps } from "./ContactFormInputs";
 
 interface Props {
   inputProps: InputProps;
