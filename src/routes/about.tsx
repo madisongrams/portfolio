@@ -1,4 +1,4 @@
-import { Box, Text, VStack, useColorModeValue } from "@chakra-ui/react";
+import { Box, Image, Text, VStack, useColorModeValue } from "@chakra-ui/react";
 import ConfettiContainer from "../components/ConfettiContainer";
 
 export default function About() {
@@ -10,8 +10,47 @@ export default function About() {
         borderRadius="lg"
         marginTop="10"
         color={useColorModeValue("purple.600", "purple.50")}
+        w={{ base: "full", lg: "800px" }}
       >
         <VStack fontFamily="mono" spacing={8} padding="10" fontSize="md">
+          <Box
+            borderRadius="50%"
+            position="relative"
+            transition="all .5s ease-in-out"
+            _after={{
+              content: '""',
+              position: "absolute",
+              top: 0,
+              left: 0,
+              borderRadius: "50%",
+              width: "100%",
+              height: "100%",
+              opacity: "0%",
+              background: useColorModeValue("purple.200", "purple.800"),
+              transition: "all .5s ease-in-out",
+            }}
+            sx={{
+              "&:hover img": {
+                filter: "grayscale(70%)",
+              },
+            }}
+            _hover={{
+              _after: {
+                opacity: "60%",
+              },
+              sx: {
+                "& img": {
+                  filter: "grayscale(100%)",
+                },
+              },
+            }}
+          >
+            <Image
+              src="Madison-3.jpg"
+              borderRadius="50%"
+              transition="all .5s ease-in-out"
+            />
+          </Box>
           <Text color={textColor}>
             {`As a software engineer, I'm passionate about coding and solving complex
         problems. I have a deep passion for using technology to solve pressing
