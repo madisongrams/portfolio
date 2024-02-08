@@ -15,6 +15,7 @@ import * as serviceWorker from "./serviceWorker";
 import ErrorPage from "./routes/ErrorPage";
 
 import appTheme from "./theme";
+import Work from "./routes/Work";
 
 const container = document.getElementById("root");
 if (!container) {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: "resume",
         element: <Resume />,
+      },
+      {
+        path: "Work",
+        element: <Work />,
       },
     ],
   },

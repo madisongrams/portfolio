@@ -9,6 +9,10 @@ export const NAV_ITEMS: Array<NavItem> = [
     href: "about",
   },
   {
+    label: "Work",
+    href: "work",
+  },
+  {
     label: "Resume",
     href: "resume",
   },
