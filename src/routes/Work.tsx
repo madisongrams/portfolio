@@ -21,10 +21,10 @@ export default function Work() {
       >
         <VStack fontFamily="mono" spacing={8} padding="10" fontSize="md">
           <Heading size="lg" fontWeight="bold">
-            drawing.tool
+            Drawing.Tool
           </Heading>
           <Text color={textColor}>
-            {`Drawing.Tool is a state-of-the-art 3D modeling software designed
+            {`drawing.tool is a state-of-the-art 3D modeling software designed
             for architects and designers. With its intuitive interface, advanced
             features, and seamless collaboration tools, it streamlines the design
             process and empowers users to create stunning architectural masterpieces with ease.`}
@@ -35,6 +35,27 @@ export default function Work() {
           <Text as="i">
             Technology: React, TypeScript, JavaScript, Node.js, three.js,
             Python, Django
+          </Text>
+        </VStack>
+      </Box>
+      <Box
+        bg={useColorModeValue("purple.50", "purple.800")}
+        borderRadius="lg"
+        marginTop="10"
+        color={useColorModeValue("purple.600", "purple.50")}
+        w={{ base: "full", lg: "800px" }}
+      >
+        <VStack fontFamily="mono" spacing={8} padding="10" fontSize="md">
+          <Heading size="lg" fontWeight="bold">
+            Detailed Occupancy Schedules
+          </Heading>
+          <Text color={textColor}>
+            {`Full-year occupied and unoccupied hours for lighting, appliances, and occupant density for accurate energy use calculations.`}
+          </Text>
+          <Image src="occupancy-schedules.gif" />
+          <Text as="i">
+            Technology: React, TypeScript, JavaScript, Node.js, Python, Django,
+            C++
           </Text>
         </VStack>
       </Box>
