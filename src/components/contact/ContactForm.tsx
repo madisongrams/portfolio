@@ -2,8 +2,8 @@ import { SyntheticEvent, useCallback, useRef, useState } from "react";
 
 import { Box, Button, useColorModeValue, VStack } from "@chakra-ui/react";
 import { sendForm } from "@emailjs/browser";
-import ContactFormInputs from "./ContactFormInputs";
 import ControlledInput from "./ControlledInput";
+import ContactFormInputs from "./ContactFormInputs";
 
 export default function ContactForm() {
   const [submittingMessage, setSubmittingMessage] = useState(false);
