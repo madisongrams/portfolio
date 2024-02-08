@@ -17,7 +17,7 @@ export default function Work() {
         borderRadius="lg"
         marginTop="10"
         color={useColorModeValue("purple.600", "purple.50")}
-        w="800px"
+        w={{ base: "full", lg: "800px" }}
       >
         <VStack fontFamily="mono" spacing={8} padding="10" fontSize="md">
           <Heading size="lg" fontWeight="bold">
