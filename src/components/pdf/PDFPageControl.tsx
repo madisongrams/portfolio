@@ -20,6 +20,7 @@ export default function PDFPageControl({
 
   const curPageNumber = pageNumber || 1;
   const numPagesString = numPages || "--";
+  const textColor = useColorModeValue("purple.100", "purple.800");
 
   return (
     <HStack
@@ -39,16 +40,18 @@ export default function PDFPageControl({
         colorScheme="purple"
         isDisabled={curPageNumber <= 1}
         onClick={previousPage}
+        color={textColor}
       >
         {"<"}
       </Button>
-      <Text color={useColorModeValue("purple.50", "purple.900")}>{`${
+      <Text color={textColor}>{`${
         curPageNumber || numPagesString
       } of ${numPagesString}`}</Text>
       <Button
         colorScheme="purple"
         isDisabled={curPageNumber >= (numPages || 0)}
         onClick={nextPage}
+        color={textColor}
       >
         {">"}
       </Button>

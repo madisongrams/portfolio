@@ -1,5 +1,5 @@
 import { DownloadIcon } from "@chakra-ui/icons";
-import { Box, IconButton } from "@chakra-ui/react";
+import { Box, IconButton, useColorModeValue } from "@chakra-ui/react";
 
 export default function PDFDownloadButton() {
   return (
@@ -18,6 +18,7 @@ export default function PDFDownloadButton() {
         colorScheme="purple"
         aria-label="Download"
         icon={<DownloadIcon />}
+        color={useColorModeValue("purple.100", "purple.800")}
         as="a"
         download
         href="/resume.pdf"

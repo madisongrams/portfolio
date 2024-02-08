@@ -12,10 +12,15 @@ type PDFDocumentProps = {
   numPages: number;
 };
 
+type PDFFile = string | File | null;
+
 export default function PDFViewer() {
+  const [file,] = useState<PDFFile>("/resume.pdf");
   const [numPages, setNumPages] = useState(0);
   const [pageNumber, setPageNumber] = useState(1);
-  const [renderedPageNumber, setRenderedPageNumber] = useState(-1);
+  const [renderedPageNumber, setRenderedPageNumber] = useState<number | null>(
+    null
+  );
 
   function onDocumentLoadSuccess({ numPages: _numPages }: PDFDocumentProps) {
     setNumPages(_numPages);
@@ -37,8 +42,8 @@ export default function PDFViewer() {
 
   return (
     <Container centerContent>
-      <Document file={"/resume.pdf"} onLoadSuccess={onDocumentLoadSuccess}>
-        {isLoading && renderedPageNumber > 0 && (
+      <Document file={file} onLoadSuccess={onDocumentLoadSuccess}>
+        {isLoading && renderedPageNumber ? (
           <Page
             key={renderedPageNumber}
             className="prevPage"
@@ -46,13 +51,14 @@ export default function PDFViewer() {
             renderTextLayer={false}
             renderAnnotationLayer={false}
           />
-        )}
+        ) : null}
         <Page
           key={pageNumber}
           pageNumber={pageNumber}
           renderTextLayer={false}
           onRenderSuccess={() => setRenderedPageNumber(pageNumber)}
           renderAnnotationLayer={false}
+          className={`${isLoading ? "loadingPage" : ""}`}
         />
 
         <PDFPageControl
