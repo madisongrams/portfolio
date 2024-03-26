@@ -8,8 +8,8 @@ import "../static/custom-cursor.css";
 export default function Terminal() {
   const bgColor = useColorModeValue("whiteAlpha.500", "blackAlpha.500");
   const boxShadow = useColorModeValue("lg", "dark-lg");
-  const borderColor = useColorModeValue("purple.600", "purple.100");
-  const textColor = useColorModeValue("purple.600", "purple.50");
+  const borderColor = useColorModeValue("purple.600", "purple.200");
+  const textColor = useColorModeValue("purple.600", "purple.100");
 
   return (
     <Flex
