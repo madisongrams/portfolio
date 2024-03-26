@@ -21,14 +21,13 @@ export default function StyledLink({
       to={href}
       href={href ?? "#"}
       fontSize={"lg"}
-      fontWeight={500}
       color={color}
       _hover={{
         textDecoration: "none",
         color: hoverColor,
       }}
     >
-      <Heading size="s">{label}</Heading>
+      <Heading size="s" fontWeight={1000}>{label}</Heading>
     </Link>
   );
 }

@@ -11,12 +11,14 @@ export default function SocialIcons() {
         href={LINKEDIN_LINK}
         aria-label="LinkedIn"
         icon={<FaLinkedin fontSize="1.25rem" />}
+        transition="all .8s ease-in-out"
       />
       <IconButton
         as="a"
         href={GITHUB_LINK}
         aria-label="GitHub"
         icon={<FaGithub fontSize="1.25rem" />}
+        transition="all .8s ease-in-out"
       />
     </ButtonGroup>
   );

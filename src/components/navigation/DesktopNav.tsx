@@ -1,24 +1,29 @@
 import { Box, Stack } from "@chakra-ui/react";
 
-import StyledLink from "../StyledLink";
-
 import { NAV_ITEMS } from "./nav-items";
+import StyledLink from "../StyledLink";
 
 type DesktopNavProps = {
   color?: string;
   hoverColor?: string;
+  bgHoverColor?: string;
 };
 
-export default function DesktopNav({ color, hoverColor }: DesktopNavProps) {
+export default function DesktopNav({ color, bgHoverColor }: DesktopNavProps) {
   return (
     <Stack direction={"row"} spacing={10}>
       {NAV_ITEMS.map((navItem) => (
-        <Box key={navItem.label}>
+        <Box
+          key={navItem.label}
+          _hover={{ background: bgHoverColor, borderRadius: "4px" }}
+          transition="all .5s ease-in-out"
+          padding="5px"
+        >
           <StyledLink
             label={navItem.label}
             href={navItem.href ?? "#"}
             color={color}
-            hoverColor={hoverColor}
+            hoverColor={color}
           />
         </Box>
       ))}
@@ -29,4 +34,5 @@ export default function DesktopNav({ color, hoverColor }: DesktopNavProps) {
 DesktopNav.defaultProps = {
   color: "black",
   hoverColor: "grey.500",
+  bgHoverColor: "grey.500",
 };

@@ -14,9 +14,10 @@ import LogoButton from "./LogoButton";
 
 export default function NavBar() {
   const { isOpen, onToggle } = useDisclosure();
-  const color = useColorModeValue("purple.600", "purple.100");
+  const color = useColorModeValue("purple.500", "purple.100");
   const hoverColor = useColorModeValue("purple.800", "purple.300");
   const bgColor = useColorModeValue("purple.100", "purple.900");
+  const bgHoverColor = useColorModeValue("purple.200", "purple.700");
 
   return (
     <Box position="sticky" top="0px" w="100%" zIndex="999" bg={bgColor}>
@@ -34,7 +35,11 @@ export default function NavBar() {
           <LogoButton color={color} hoverColor={hoverColor} />
 
           <Flex display={{ base: "none", md: "flex" }} ml={10} align={"center"}>
-            <DesktopNav color={color} hoverColor={hoverColor} />
+            <DesktopNav
+              color={color}
+              hoverColor={hoverColor}
+              bgHoverColor={bgHoverColor}
+            />
           </Flex>
         </Flex>
         <ColorModeSwitcher />

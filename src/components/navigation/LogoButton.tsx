@@ -18,6 +18,7 @@ export default function LogoButton({ color, hoverColor }: LogoButtonProps) {
         _hover={{
           color: hoverColor,
         }}
+        transition="all .5s ease-in-out"
       />
     </RouteLink>
   );

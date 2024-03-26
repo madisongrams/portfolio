@@ -17,6 +17,7 @@ export default function ColorModeSwitcher() {
       aria-label={`Switch to ${text} mode`}
       colorScheme="purple"
       justifySelf="flex-end"
+      transition="0.5s"
     />
   );
 }

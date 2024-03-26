@@ -33,9 +33,14 @@ export default function ContactFormIcons() {
           icon={<MdEmail />}
           onClick={onCopy}
           isRound
+          transition="all .5s ease-in-out"
         />
       </Tooltip>
-
+      <Tooltip
+        label={"Github"}
+        closeOnClick={false}
+        hasArrow
+      >
       <Link href={GITHUB_LINK} isExternal>
         <IconButton
           aria-label="github"
@@ -45,8 +50,15 @@ export default function ContactFormIcons() {
           icon={<FaGithub />}
           colorScheme="purple"
           isRound
+          transition="all .5s ease-in-out"
         />
       </Link>
+      </Tooltip>
+      <Tooltip
+        label={"LinkedIn"}
+        closeOnClick={false}
+        hasArrow
+      >
       <Link href={LINKEDIN_LINK} isExternal>
         <IconButton
           aria-label="linkedin"
@@ -55,8 +67,10 @@ export default function ContactFormIcons() {
           icon={<FaLinkedin size="28px" />}
           colorScheme="purple"
           isRound
+          transition="all .5s ease-in-out"
         />
       </Link>
+      </Tooltip>
     </HStack>
   );
 }
