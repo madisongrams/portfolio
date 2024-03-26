@@ -1,8 +1,19 @@
-import { Box, Image, Text, VStack, useColorModeValue } from "@chakra-ui/react";
+import {
+  Box,
+  Heading,
+  Image,
+  Text,
+  VStack,
+  useColorModeValue,
+  Link,
+} from "@chakra-ui/react";
 import ConfettiContainer from "../components/ConfettiContainer";
+import { Link as RouteLink } from "react-router-dom";
 
 export default function About() {
   const textColor = useColorModeValue("purple.600", "purple.50");
+  const linkColor = useColorModeValue("purple.700", "purple.200");
+
   return (
     <ConfettiContainer title="About Me">
       <Box
@@ -51,38 +62,89 @@ export default function About() {
               transition="all .5s ease-in-out"
             />
           </Box>
+          <Heading size="lg">
+            Welcome
+          </Heading>
           <Text color={textColor}>
-            {`As a software engineer, I'm passionate about coding and solving complex
-        problems. I have a deep passion for using technology to solve pressing
-        global challenges. My experience spans across a variety of full stack
-        web development technologies, including ReactJS and Django, to make
-        robust, scalable web applications. I'm also well-versed in a range of
-        programming languages, including Java, Python, and Scala`}
+            {`Hello there! I'm Madison Grams, a Senior Software Engineer based in 
+            Atlanta, GA, with a strong passion for crafting innovative solutions 
+            and tackling complex challenges. With multiple years of experience 
+            in web development and a robust background in full-stack technologies, 
+            I bring a wealth of expertise to every project I undertake.`}
+          </Text>
+          <Heading size="lg">Passion for Technology, Drive for Impact</Heading>
+          <Text color={textColor}>
+            {`My journey in software engineering began with a deep-seated passion 
+            for coding and problem-solving. Graduating with highest honors from 
+            the Georgia Institute of Technology with a B.S. in Computer Science, 
+            I focused on Artificial Intelligence and Systems & Architecture, 
+            laying the groundwork for my career dedicated to leveraging technology 
+            for meaningful change.`}
+          </Text>
+          <Heading size="lg">Building Sustainable Solutions</Heading>
+          <Text color={textColor}>
+            {`One of the most rewarding experiences in my career has been working 
+            for a company dedicated to combating climate change. Here, I applied 
+            my technical skills to drive decarbonization efforts, gaining invaluable 
+            insights into the pivotal role of sustainable technology solutions in shaping a 
+            better world.`}
+          </Text>
+          <Heading size="lg">A Track Record of Excellence</Heading>
+          <Text color={textColor}>
+            {`Throughout my professional journey, I've had the privilege of leading 
+            impactful projects and teams. From developing data-oriented analysis software 
+            for real estate portfolio management to enhancing drawing and visualization 
+            capabilities in React apps, I thrive on delivering high-quality solutions 
+            that push boundaries and drive efficiency.`}
+          </Text>
+          <Heading size="lg">Endorsements from Colleagues</Heading>
+          <Text color={textColor}>
+            {`My commitment to excellence and collaboration has earned me accolades 
+            from colleagues and managers alike. Here's what they have to say:`}
           </Text>
           <Text color={textColor}>
-            {`I graduated
-        with highest honors from the Georgia Institute of Technology in December
-        2019 with a B.S. in Computer Science, focusing on Artificial
-        Intelligence and Systems & Architecture. During my time in college, I
-        had the opportunity to work as a teaching assistant for an introductory
-        computer architecture course, honing my ability to explain complex
-        technical concepts in simple terms.`}
+            {`Joseph Smith, Director of Engineering @ Outer Labs: "[Madison] 
+            consistently demonstrated exceptional technical skills, a rapid learning ability, 
+            and a commitment to producing high-quality software."`}
           </Text>
           <Text color={textColor}>
-            {`I have most recently been working
-        for a company fighting climate change, where I have been able to apply
-        my technical skills towards a meaningful cause. Working towards
-        decarbonization, I have gained a deep understanding of the importance of
-        sustainable technology solutions in creating a better world. My work at
-        this company has only fueled my passion to use technology for good.`}
+            {`Daniel Chopson, Chief Technology officer @ cove.tool: "Madison is a dedicated, 
+            hard-working employee... [they] provided valuable structure to our system architecture."`}
           </Text>
           <Text color={textColor}>
-            {`I am
-        constantly seeking new challenges and opportunities to make a positive
-        impact through my work. If you're looking for a skilled and dedicated
-        software engineer to join your team, I'd love to connect and discuss how
-        my skills and experience can help you achieve your goals.`}
+            {`A Former Colleague: "Madison consistently stood out as an exceptional engineer 
+            on our team, demonstrating an unwavering commitment to tackling the most challenging 
+            tasks and problems."`}
           </Text>
+          <Heading size="lg">{`Let's Connect!`}</Heading>
+          <Box display="flex" gap="0px" whiteSpace="normal">
+            <span>
+              <Text color={textColor} display="inline" as="span">
+                {`If you're seeking a skilled and dedicated software engineer to drive your projects 
+            forward, I'd love to connect and discuss how my skills and experience can help you achieve 
+            your goals. Feel free to reach out via email at madisongrams.dev@gmail.com or `}
+              </Text>
+              <Link
+                as={RouteLink}
+                to={"../contact"}
+                href={"../contact"}
+                relative="path"
+                color={linkColor}
+                _hover={{
+                  textDecoration: "none",
+                  color: textColor,
+                }}
+                fontWeight={"bold"}
+                display="inline"
+              >
+                <Text color={linkColor} _hover={{ color: textColor }} display="inline" as="span">
+                  contact me here!
+                </Text>
+              </Link>
+            </span>
+          </Box>
+
+          <Text color={textColor}>{`Let's innovate together!`}</Text>
         </VStack>
       </Box>
     </ConfettiContainer>
