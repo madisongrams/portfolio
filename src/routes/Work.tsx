@@ -1,64 +1,42 @@
-import {
-  Box,
-  Heading,
-  Image,
-  Text,
-  VStack,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Heading, Image, Text, useColorModeValue } from "@chakra-ui/react";
 import ConfettiContainer from "../components/ConfettiContainer";
+import ContainerBox from "../components/ContainerBox";
 
 export default function Work() {
   const textColor = useColorModeValue("purple.600", "purple.50");
   return (
     <ConfettiContainer title="Work">
-      <Box
-        bg={useColorModeValue("purple.50", "purple.800")}
-        borderRadius="lg"
-        marginTop="10"
-        color={useColorModeValue("purple.600", "purple.50")}
-        w={{ base: "full", lg: "800px" }}
-      >
-        <VStack fontFamily="mono" spacing={8} padding="10" fontSize="md">
-          <Heading size="lg" fontWeight="bold">
-            Drawing.Tool
-          </Heading>
-          <Text color={textColor}>
-            {`drawing.tool is a state-of-the-art 3D modeling software designed
+      <ContainerBox>
+        <Heading size="lg" fontWeight="bold">
+          Drawing.Tool
+        </Heading>
+        <Text color={textColor}>
+          {`drawing.tool is a state-of-the-art 3D modeling software designed
             for architects and designers. With its intuitive interface, advanced
             features, and seamless collaboration tools, it streamlines the design
             process and empowers users to create stunning architectural masterpieces with ease.`}
-          </Text>
-          <Image src="drawwithimage6.gif" />
-          <Image src="primitive_mass.gif" />
+        </Text>
+        <Image src="drawwithimage6.gif" />
+        <Image src="primitive_mass.gif" />
 
-          <Text as="i">
-            Technology: React, TypeScript, JavaScript, Node.js, three.js,
-            Python, Django
-          </Text>
-        </VStack>
-      </Box>
-      <Box
-        bg={useColorModeValue("purple.50", "purple.800")}
-        borderRadius="lg"
-        marginTop="10"
-        color={useColorModeValue("purple.600", "purple.50")}
-        w={{ base: "full", lg: "800px" }}
-      >
-        <VStack fontFamily="mono" spacing={8} padding="10" fontSize="md">
-          <Heading size="lg" fontWeight="bold">
-            Detailed Occupancy Schedules
-          </Heading>
-          <Text color={textColor}>
-            {`Full-year occupied and unoccupied hours for lighting, appliances, and occupant density for accurate energy use calculations.`}
-          </Text>
-          <Image src="occupancy-schedules.gif" />
-          <Text as="i">
-            Technology: React, TypeScript, JavaScript, Node.js, Python, Django,
-            C++
-          </Text>
-        </VStack>
-      </Box>
+        <Text as="i">
+          Technology: React, TypeScript, JavaScript, Node.js, three.js, Python,
+          Django
+        </Text>
+      </ContainerBox>
+      <ContainerBox>
+        <Heading size="lg" fontWeight="bold">
+          Detailed Occupancy Schedules
+        </Heading>
+        <Text color={textColor}>
+          {`Full-year occupied and unoccupied hours for lighting, appliances, and occupant density for accurate energy use calculations.`}
+        </Text>
+        <Image src="occupancy-schedules.gif" />
+        <Text as="i">
+          Technology: React, TypeScript, JavaScript, Node.js, Python, Django,
+          C++
+        </Text>
+      </ContainerBox>
     </ConfettiContainer>
   );
 }
