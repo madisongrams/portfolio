@@ -23,6 +23,17 @@ export default function TechnologySection() {
             my technical skills to drive decarbonization efforts, gaining invaluable 
             insights into the pivotal role of sustainable technology solutions in shaping a 
             better world.`}
+
+        <Heading size="lg" sx={{ marginTop: "var(--chakra-space-8)" }}>
+          A Track Record of Excellence
+        </Heading>
+        <Text color={textColor}>
+          {`Throughout my professional journey, I've had the privilege of leading 
+        impactful projects and teams. From developing data-oriented analysis software 
+        for real estate portfolio management to enhancing drawing and visualization 
+        capabilities in React apps, I thrive on delivering high-quality solutions 
+        that push boundaries and drive efficiency.`}
+        </Text>
       </Text>
     </ContainerBox>
   );
