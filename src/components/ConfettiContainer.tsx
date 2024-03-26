@@ -29,6 +29,7 @@ export default function ConfettiContainer({ title, children }: Props) {
       bg={useColorModeValue("purple.200", "gray.900")}
       align="center"
       justify="center"
+      borderRadius='10px'
       css={{
         backgroundImage: useColorModeValue(CONFETTI_LIGHT, CONFETTI_DARK),
         backgroundAttachment: "fixed",
@@ -38,7 +39,6 @@ export default function ConfettiContainer({ title, children }: Props) {
         <Box>
           <VStack spacing={{ base: 4, md: 8 }}>
             <PageHeading>{title}</PageHeading>
-
             {children}
           </VStack>
         </Box>

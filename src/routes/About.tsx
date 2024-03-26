@@ -8,7 +8,6 @@ import EndSection from "../components/about/EndSection";
 export default function About() {
   return (
     <ConfettiContainer title="About Me">
-      
         <IntroSection />
         <TechnologySection />
         <RecommendationSection />

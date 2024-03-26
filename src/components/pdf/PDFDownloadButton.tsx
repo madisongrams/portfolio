@@ -9,7 +9,7 @@ export default function PDFDownloadButton() {
       top="5%"
       right="0%"
       transform="translateX(-50%)"
-      transition="opacity ease-in-out 0.2s"
+      transition="all ease-in-out 0.3s"
       borderRadius="10px"
       opacity={0}
       fontSize={"sm"}
