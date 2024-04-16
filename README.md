@@ -1,3 +1,5 @@
+Personal website hosted at [madisongrams.dev](https://madisongrams.dev/) through github pages.
+
 This project was bootstrapped with
 [Create React App](https://github.com/facebook/create-react-app).
 
@@ -50,6 +52,12 @@ You don’t have to ever use `eject`. The curated feature set is suitable for
 small and middle deployments, and you shouldn’t feel obligated to use this
 feature. However we understand that this tool wouldn’t be useful if you couldn’t
 customize it when you are ready for it.
+
+### `npm run deploy`
+
+Builds the app for production to the `build` folder and deploys the app with the 
+command `gh-pages -d build`. This creates a new branch `gh-pages` which is where 
+the deploy happens.
 
 ## Learn More
 
